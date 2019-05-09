@@ -9,7 +9,7 @@
         <a class='item news-item' *ngFor='let source of sources | async' routerLink='/news/{{ source["id"] }}'
           routerLinkActive='active'>
           <span class='side-news-item'>
-            <img class='ui avatar image' src='{{ source["urlsToLogos"]["small"] }}' />
+            <img class='ui avatar image' [src]="'assets/image/' + source['name'] + '.png'" />
             <span class='side-news-item'>
               {{ source['name'] }}
             </span>
